@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="{ 'dark-mode': isDarkMode }">
     <nav class="navbar navbar-expand-lg bg-transparent border-bottom">
       <div class="container-fluid">
         <router-link to="/">
@@ -67,6 +67,12 @@
             <input class="form-control me-2 bg-transparent" type="search" placeholder="Buscar" aria-label="Buscar"
               v-model="searchQuery" />
           </form>
+          <div class="dark-mode-toggle ms-3" @click="toggleDarkMode">
+            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24" class="dark-mode-icon">
+              <path d="M0 0h24v24H0z" fill="none"/>
+              <path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36-.98 1.37-2.58 2.26-4.4 2.26-2.98 0-5.4-2.42-5.4-5.4 0-1.81.89-3.42 2.26-4.4-.44-.06-.9-.1-1.36-.1z"/>
+            </svg>
+          </div>
         </div>
       </div>
     </nav>
@@ -141,7 +147,8 @@ export default {
     return {
       movies: list.movies,
       searchQuery: '',
-      searchResults: []
+      searchResults: [],
+      isDarkMode: false
     };
   },
   methods: {
@@ -153,6 +160,9 @@ export default {
       } else {
         this.searchResults = [];
       }
+    },
+    toggleDarkMode() {
+      this.isDarkMode = !this.isDarkMode;
     }
   },
   watch: {
@@ -162,10 +172,10 @@ export default {
   }
 };
 
-
 </script>
 
 <style scoped>
+/* Light mode (default) styles */
 .navbar {
   padding: 10px 30px;
 }
@@ -194,5 +204,83 @@ export default {
 
 .icons img {
   margin: 5px;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-icon {
+  fill: #212121;
+  transition: fill 0.3s ease;
+}
+
+/* Dark mode styles */
+.dark-mode {
+  background-color: #121212;
+  color: #f5f5f5;
+}
+
+.dark-mode .navbar {
+  border-bottom-color: #333 !important;
+}
+
+.dark-mode .nav-link,
+.dark-mode a,
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3 {
+  color:rgb(255, 255, 255);
+}
+
+.dark-mode #navbar {
+  border-bottom-color: #333 !important;
+}
+
+
+.dark-mode .dropdown-menu {
+  background-color: #333;
+}
+
+.dark-mode .dropdown-item {
+  color: #f5f5f5;
+}
+
+.dark-mode .dropdown-item:hover {
+  background-color: #444;
+}
+
+.dark-mode .form-control {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f5f5f5;
+  border-color: #444;
+}
+
+.dark-mode .footer {
+  background-color: #333;
+  box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode .dark-mode-icon {
+  fill: #f5f5f5;
+}
+
+.dark-mode .dropdown-toggle {
+  color: #f5f5f5 !important;
+}
+
+.dark-mode .dropdown-divider {
+  border-top-color: #444;
 }
 </style>

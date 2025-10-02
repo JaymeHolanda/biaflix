@@ -13,7 +13,7 @@
   </a>
 </p>
 
-<img src="./src/assets/images/app.png">
+<img src="./src/assets/images/biaflixdark.png">
 
 ## 💻 Projeto
 

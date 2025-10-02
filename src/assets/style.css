@@ -67,3 +67,31 @@ section .body {
   opacity: 0.8;
   transition: ease-in-out 0.2s;
 }
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode .title {
+  color: #fff;
+}
+
+.dark-mode .categoria {
+  color: #fff;
+}
+
+.dark-mode input[type="text"],
+.dark-mode input[type="search"] {
+  color: #fff;
+  background-color: #222;
+}
+.dark-mode a {
+  color: #fff;
+}
+
+.dark-mode input[type="text"]::placeholder,
+.dark-mode input[type="search"]::placeholder {
+  color: #fff;
+  opacity: 1;
+}
