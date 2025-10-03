@@ -17,7 +17,18 @@
 
 ## 💻 Projeto
 
-Aplicação de filmes.
+Aplicação web de streaming de vídeos, onde o usuário pode assistir aos vídeos disponíveis, buscar por títulos específicos e navegar por categorias. Além disso o usuário terá acesso a um chat com agent ia para tirar dúvidas sobre os vídeos e categorias disponíveis. 
+
+- Acesse as branchs de desenvolvimento:
+  - [Modo Dark](https://github.com/JaymeHolanda/biaflix/tree/modo-dark)
+  - [Chat para agent ia](https://github.com/JaymeHolanda/biaflix/tree/chat)
+
+## ✨ Prototipagem do Chat para o Agent IA
+
+Aplicação do prototipo do chat para o Agent IA, desenvolvido no Figma. Com os modos claro e escuro.
+
+<p align="center">
+  <img src="img/prototipagem do chat.png" alt="Prototipagem do Chat para o Agent IA" width="600">
 
 ## ✨ Tecnologias
 
@@ -51,3 +62,5 @@ npm run dev
 ## 📝 Licença
 
 Este projeto este projeto está sobre a MIT license. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+
+
