@@ -13,7 +13,7 @@
   </a>
 </p>
 
-<img src="./src/assets/images/biaflixdark.png">
+<img src="./src/assets/images/imagem foco.png">
 
 ## 💻 Projeto
 
