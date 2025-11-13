@@ -1,15 +1,15 @@
 import axios from 'axios';
 
-const OMDB_API_KEY = 'a9cd5145';
-const OMDB_BASE_URL = 'https://www.omdbapi.com/';
+const API_KEY = 'ec9617f9';
+const BASE_URL = 'https://www.omdbapi.com/';
 
 class OMDBService {
   // Buscar filme por título
   async searchByTitle(title) {
     try {
-      const response = await axios.get(OMDB_BASE_URL, {
+      const response = await axios.get(BASE_URL, {
         params: {
-          apikey: OMDB_API_KEY,
+          apikey: API_KEY,
           t: title,
           plot: 'full'
         }
@@ -24,9 +24,9 @@ class OMDBService {
   // Buscar filme por ID do IMDB
   async searchById(imdbId) {
     try {
-      const response = await axios.get(OMDB_BASE_URL, {
+      const response = await axios.get(BASE_URL, {
         params: {
-          apikey: OMDB_API_KEY,
+          apikey: API_KEY,
           i: imdbId,
           plot: 'full'
         }
@@ -41,9 +41,9 @@ class OMDBService {
   // Buscar múltiplos filmes por título (retorna lista)
   async searchMovies(searchTerm, page = 1) {
     try {
-      const response = await axios.get(OMDB_BASE_URL, {
+      const response = await axios.get(BASE_URL, {
         params: {
-          apikey: OMDB_API_KEY,
+          apikey: API_KEY,
           s: searchTerm,
           page: page
         }
